@@ -1,0 +1,89 @@
+$colours: (
+      '#ff0066',
+     turquoise,
+     blueviolet,
+   
+);
+
+
+.background {
+  height: 200px;
+  width:   200px;
+  border-radius:50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+
+.background__color-map {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: animation-colors; 
+  animation-timing-function: linear; 
+}
+ 
+ 
+@keyframes animation-colors {
+  0% {
+    background-color: unquote(nth($colours, 1)); 
+  }
+  50% {
+    background-color: nth($colours, 2); 
+  }
+ 
+  100% {
+    background-color: nth($colours, 3);
+  }
+}
+
+
+/*-------------SEGUNDO EJERCICIO----------------*/
+ 
+
+:root {
+  --color-first: 	#8A2BE2;
+  --color-second: 	#FFB6C1;
+}
+
+$squareList: 
+    (1rem, 0.5rem, 2.25rem, 0),
+    (0, 1.5rem, 1.25rem, 3rem);
+
+@mixin box1($s){
+   $s1: nth($s, 1);
+   $s2: nth($s, 2);
+   $s3: nth($s, 3);
+   $s4: nth($s, 4);
+   border-top-left-radius:$s1;
+   border-top-right-radius:$s2;
+   border-bottom-left-radius:$s3;
+   border-bottom-right-radius:$s4;
+  
+}
+
+
+.container{
+  display:flex;
+}
+
+
+.box1{
+  @include box1(nth($squareList, 1));
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+  border:1px solid;
+  margin-top: 20px;
+  background-color: var(--color-first);
+}
+
+.box2{
+  @include box1(nth($squareList, 2));
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border:1px solid;
+  margin-left: 10px;
+  background-color: var(--color-second);
+}
+
