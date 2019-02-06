@@ -1,0 +1,81 @@
+.background {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.background__color-map {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: animation-colors;
+          animation-name: animation-colors;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes animation-colors {
+  0% {
+    background-color: #ff0066;
+  }
+  50% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: blueviolet;
+  }
+}
+
+@keyframes animation-colors {
+  0% {
+    background-color: #ff0066;
+  }
+  50% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: blueviolet;
+  }
+}
+
+/*-------------SEGUNDO EJERCICIO----------------*/
+:root {
+  --color-first: 	#8A2BE2;
+  --color-second: 	#FFB6C1;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box1 {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 2.25rem;
+  border-bottom-right-radius: 0;
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  margin-top: 20px;
+  background-color: var(--color-first);
+}
+
+.box2 {
+  border-top-left-radius: 0;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 3rem;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  margin-left: 10px;
+  background-color: var(--color-second);
+}
+/*# sourceMappingURL=style.css.map */
